@@ -48,7 +48,7 @@ const Dashboard = (props: any) => {
 
     }, [dispatch])
 
-    const listItems = data ? data.map((deployment: Deployment) => {
+    const listItems = data.length>0 ? data.map((deployment: Deployment) => {
         return <Item {...deployment} key={deployment._id} onDelete={() => { onDelete(deployment._id) }}></Item>
     }) : null
     const onCreateClick = () => {
