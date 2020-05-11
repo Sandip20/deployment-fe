@@ -2,7 +2,7 @@ import axios from 'axios';
 import { fetchDeployments, deleteDeployment ,createDeployment} from '../store/actions/deployment.action';
 import { fetchTemplates } from '../store/actions/template.action';
 import { Deployment } from '../store/types/deployment.types';
-const url = "http://localhost:3000"
+const url = "http://ec2-3-92-214-96.compute-1.amazonaws.com:4000"
 export const getDeployments = () => (dispatch: any) => {
     axios
         .get(`${url}/deployments`)
