@@ -50,7 +50,7 @@ const Dashboard = (props: any) => {
 
     const listItems = data.length>0 ? data.map((deployment: Deployment) => {
         return <Item {...deployment} key={deployment._id} onDelete={() => { onDelete(deployment._id) }}></Item>
-    }) : null
+    }) : []
     const onCreateClick = () => {
 
         props.history.push('/deploy')
